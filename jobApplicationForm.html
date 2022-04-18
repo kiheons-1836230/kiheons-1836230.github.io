@@ -16,10 +16,16 @@
 
 	<fieldset class="form-horizontal" >
 		<legend>Account</legend>
-		<div class="form-group">
+        <div class="form-group">
 			<label class="col-sm-3 control-label">Email</label>
 			<div class="col-sm-9">
 				<input class="form-control" type="text" name="email">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">Username</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="text" name="Username">
 			</div>
 		</div>
 		<div class="form-group">
@@ -29,7 +35,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-3 control-label">Repeat password</label>
+			<label class="col-sm-3 control-label">Confirm password</label>
 			<div class="col-sm-9">
 				<input class="form-control" type="password" name="repeat_password">
 			</div>
@@ -117,6 +123,53 @@
 				</select>
 			</div>
 		</div>
+        <div class="form-group">
+			<label class="col-sm-3 control-label">County</label>
+			<div class="col-sm-9">
+				<select class="form-control" name="county">
+					<option value="" selected="true">County</option>
+					<option value="Adams">Adams</option>
+					<option value="Asotin">Asotin</option>
+					<option value="Benton">Benton</option>
+					<option value="Chelan">Chelan</option>
+					<option value="Clallam">Clallam</option>
+					<option value="Clark">Clark</option>
+					<option value="Columbia">Columbia</option>
+					<option value="Cowlitza">Cowlitz</option>
+					<option value="Douglas">Douglas</option>
+					<option value="Ferry">Ferry</option>
+					<option value="Franklin">Franklin</option>
+					<option value="Garfield">Garfield</option>
+					<option value="Grant">Grant</option>
+					<option value="GH">Grays Harbor</option>
+					<option value="Island">Island</option>
+					<option value="Jefferson">Jefferson</option>
+					<option value="King">King</option>
+					<option value="Kitsap">Kitsap</option>
+					<option value="Kittias">Kittias</option>
+					<option value="Klickitat">Klickitat</option>
+					<option value="Lewis">Lewisd</option>
+					<option value="Lincoln">Lincoln</option>
+					<option value="Mason">Mason</option>
+					<option value="Okanogan">Okanogan</option>
+					<option value="Pacific">Pacific</option>
+					<option value="PO">Pend Oreille</option>
+					<option value="Pierce">Pierce</option>
+					<option value="San Juan">San Juan</option>
+					<option value="Skagit">Skagit</option>
+					<option value="Skamania">Skamania</option>
+					<option value="Snohomish">Snohomish</option>
+					<option value="Spokane">Spokane</option>
+					<option value="Stevens">Stevens</option>
+					<option value="Thurston">Thurston</option>
+					<option value="Wahkiakum">Wahkiakum</option>
+					<option value="Walla Walla">Walla Walla</option>
+					<option value="Whatcom">Whatcom</option>
+					<option value="OR">Oregon</option>
+					<option value="Whitman">Whitman</option>
+					<option value="Yakima">Yakima	
+				</select>
+			</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">ZIP</label>
 			<div class="col-sm-9">
@@ -125,10 +178,39 @@
 		</div>
 	</fieldset>
 
+<fieldset class="form-horizontal" >
+		<legend>Background Information</legend>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">Highest Degree Earned</label>
+			<div class="col-sm-9">
+				<select class="form-control" name="degree">
+					<option value="" selected="true">Choose a Degree</option>
+					<option value="HSP">High school diploma</option>
+					<option value="BS/BA">BS/BA</option>
+					<option value="PHD">PHD</option>
+					<option value="MD">MD</option>
+					<option value="AA">AA</option>
+					<option value="MS">MS</option>
+				</select>
+			</div>
+		</div>
+        <div class="form-group">
+			<label class="col-sm-3 control-label">Highest level of education</label>
+			<div class="col-sm-9">
+				<select class="form-control" name="education">
+					<option value="" selected="true">Education</option>
+					<option value="Middle School">Middle School</option>
+					<option value="High School">High School</option>
+					<option value="College">College</option>
+			
+				</select>
+		</div>
+	</fieldset>
+
 	<p>&nbsp;</p>
 
 	<fieldset>
-		<legend>Availability</legend>
+		<legend>General Questions</legend>
 		<div class="form-group row">
 			<label class="col-sm-12 control-label">Are you legally able to be employed in this country?</label>
 			<div class="col-sm-offset-1 col-sm-11">
@@ -140,6 +222,31 @@
 				<div class="radio">
 					<label>
 						<input type="radio" name="legal" value="no">No
+					</label>
+				</div>
+                <div class="radio">
+					<label>
+						<input type="radio" name="legal" value="no">Prefer not to answer
+					</label>
+				</div>
+			</div>
+		</div>
+        <div class="form-group row">
+			<label class="col-sm-12 control-label">Have you ever been convicted of a felony?</label>
+			<div class="col-sm-offset-1 col-sm-11">
+				<div class="radio">
+					<label>
+						<input type="radio" name="legal" value="yes">Yes
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="legal" value="no">No
+					</label>
+				</div>
+                <div class="radio">
+					<label>
+						<input type="radio" name="legal" value="no">Prefer not to answer
 					</label>
 				</div>
 			</div>
@@ -169,6 +276,12 @@
 					<label>
 						<input type="checkbox" name="position_tp" value="temporary">
 						Temporary
+					</label>
+				</div>
+                <div class="checkbox">
+					<label>
+						<input type="checkbox" name="position_pt" value="parttime">
+						Per Diem
 					</label>
 				</div>
 			</div>
@@ -221,8 +334,24 @@
 			<textarea class="form-control" name="deserve" rows="6"></textarea>
 		</div>
 		<div class="form-group">
-			<label class="control-label">Describe a recent project</label>
-			<textarea class="form-control" name="project" rows="6"></textarea>
+			<label class="control-label">Do you have previous experience in this type of position? If so, please describe what you did, if not, type N/A</label>
+			<textarea class="form-control" name="experience" rows="8"></textarea>
+		</div>
+	</fieldset>
+
+</fieldset>
+
+	<p>&nbsp;</p>
+
+	<fieldset>
+		<legend>References</legend>
+		<div class="form-group">
+			<label class="control-label">Reference #1 (please provide email and relation)</label>
+			<textarea class="form-control" name="Reference" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Reference #2 (please provide email and relation</label>
+			<textarea class="form-control" name="project" rows="3"></textarea>
 		</div>
 	</fieldset>
 
@@ -231,8 +360,12 @@
 	<input class="btn btn-primary btn-lg" type="submit" value="Submit form">
 
 	<p>&nbsp;</p>
+    
+    
 
 </form>
 </div><!-- close .container -->
 </body>
 </html>
+
+
